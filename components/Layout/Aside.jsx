@@ -11,7 +11,7 @@ function Aside() {
             <div className='flex items-center justify-between gap-4 flex-col h-full py-5 px-2'>
                 <MenuButton onClick={toggle} icon={<VscChromeClose />} />
                 <Nav />
-                <MenuButton classNames='hover:rotate-180' icon={<VscColorMode />} />
+                <MenuButton className='hover:rotate-180' icon={<VscColorMode />} />
             </div>
         </aside>
     )

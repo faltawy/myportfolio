@@ -15,9 +15,8 @@
 }
 
 .myname__sep {
-    @apply bg-lightBlue h-1 w-7;
+    @apply dark:bg-lightBlue bg-slate-500 h-1 w-7;
 }
-
 
 
 @layer base {
