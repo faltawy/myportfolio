@@ -3,7 +3,6 @@ import { HiMenu } from 'react-icons/hi'
 import { VscColorMode } from 'react-icons/vsc'
 import Navcontext from './Context'
 import MenuButton from './MenuButton'
-import ThemeContext from '../theme/Context';
 import { useTheme } from 'next-themes'
 function useTheme2() {
     const { setTheme, theme } = useTheme()

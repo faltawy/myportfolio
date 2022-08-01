@@ -4,6 +4,11 @@
 @import url('./styles.css');
 @import url('./animations.css');
 
+::selection{
+    @apply text-brand bg-slate-200
+}
+
+
 @layer utilities {
     .flex-center {
         @apply flex items-center justify-center
