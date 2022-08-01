@@ -20,7 +20,7 @@ function Header() {
     const [theme, toggleTheme] = useTheme2()
 
     return (
-        <header className='container sticky top-0 z-40 bg-transparent mx-auto flex items-center justify-between h-[50px] px-2'>
+        <header className='container sticky top-0 z-40 bg-darkBlue p-3 mx-auto flex items-center justify-between h-[50px] px-2'>
             <div className="brand">
                 <span className='font-extrabold text-xl text-brand'>AH</span>
             </div>
