@@ -4,6 +4,8 @@
 @import url('./styles.css');
 @import url('./animations.css');
 
+
+
 ::selection{
     @apply text-brand bg-slate-200
 }
@@ -20,7 +22,7 @@
 }
 
 .myname__sep {
-    @apply dark:bg-lightBlue bg-slate-500 h-1 w-7;
+    @apply dark:bg-lightBlue bg-slate-500 h-1 w-4;
 }
 
 
@@ -28,4 +30,10 @@
     html {
         font-family: "Montserrat Alternates", sans-serif;
     }
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
 }

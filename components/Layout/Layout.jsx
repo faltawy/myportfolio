@@ -16,13 +16,13 @@ function Layout({ children }) {
     const [expanded, toggle] = useExpand(false)
     return (
         <ThemeProvider attribute='class' storageKey='THEME' defaultTheme='light' themes={['light','dark']}>
-            <div className='w-full dark:bg-darkBlue bg-lightBlue min-h-screen flex items-center flex-col'>
+            <div className='w-screen dark:bg-darkBlue bg-lightBlue min-h-screen flex items-center flex-col'>
                 <AsideContext.Provider value={[expanded, toggle]}>
                     <Header />
                     <Aside />
                 </AsideContext.Provider>
                 <main className='w-full flex-1'>
-                    {children}
+                    {children} 
                 </main>
             </div>
         </ThemeProvider>
