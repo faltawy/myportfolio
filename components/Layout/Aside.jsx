@@ -7,11 +7,11 @@ import { useRouter } from 'next/router'
 import { useTheme2 } from './Header'
 function Aside() {
     const [expanded, toggle] = useContext(context)
-    const [theme, toggleTheme] = useTheme2()
+    const [toggleTheme] = useTheme2()
     const router = useRouter()
     useEffect(() => {
         if (expanded) {
-            setTimeout(toggle,500)
+            setTimeout(toggle, 500)
         }
     }, [router.asPath])
     return (
