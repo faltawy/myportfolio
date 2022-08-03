@@ -17,7 +17,7 @@ export default function Home() {
     <div style={{minHeight:'calc(100vh - 50px)'}} className="container flex px-4 h-full items-center justify-center gap-3 flex-col mx-auto">
       <div className="myname opacity-0  animate__animated animate__fadeIn animate__slow">
         <span className="myname__sep"></span>
-        <h1 className="font-bold whitespace-nowrap leading-tight font-inter text-4xl text-darkBlue dark:text-lightWhite">Ahmed Hassan</h1>
+        <h1 className="font-bold whitespace-nowrap leading-tight font-inter text-4xl text-white">Ahmed Hassan</h1>
         <span className="myname__sep"></span>
       </div>
       <p className="font-semibold text-2xl dark:text-lightBlue text-lightWhite">web developer</p>

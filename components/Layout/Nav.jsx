@@ -8,7 +8,7 @@ function NavItem({ label, href, delay,...rest }) {
     const active = href === pathname
     return (
         <Link href={href} exact>
-            <a style={{ animationDelay: delay }} className={`${active ? 'active__nav_item' : 'hover:bg-brand hover:text-darkBlue'} fade-in-right font-bold flex-center text-lg text-lightWhite w-3/5 py-2 transition-all rounded-lg`}>
+            <a style={{ animationDelay: delay }} className={`${active ? 'active__nav_item' : 'hover:bg-brand dark:hover:bg-darkBlue hover:text-darkBlue'} fade-in-right font-bold flex-center text-lg text-white dark:text-lightWhite w-3/5 py-2 transition-all rounded-lg`}>
                 {label}
             </a>
         </Link>

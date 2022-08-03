@@ -1,3 +1,4 @@
 .active__nav_item {
-    @apply line-through decoration-brand decoration-2 ;
+    @apply line-through decoration-brand decoration-2;
 }
+

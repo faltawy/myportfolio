@@ -24,9 +24,9 @@ function Header() {
             <div className="brand">
                 <span className='font-extrabold text-xl text-brand'>AH</span>
             </div>
-            <div className={`${expanded ? 'hidden' : 'flex'} items-center gap-3`}>
-                <MenuButton onClick={toggleTheme} className={`dark:rotate-180 dark:text-lightBlue`} icon={<VscColorMode />} />
-                <MenuButton onClick={toggle} className='text-darkBlue dark:text-lightWhite' icon={<HiMenu />} />
+            <div className={`${expanded ? 'hidden' : 'flex'} items-center gap-3 text-darkBlue dark:text-lightWhite`}>
+                <MenuButton onClick={toggleTheme} className={`dark:rotate-180`} icon={<VscColorMode />} />
+                <MenuButton onClick={toggle}  icon={<HiMenu />} />
             </div>
         </header>
     )
