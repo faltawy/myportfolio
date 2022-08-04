@@ -2,23 +2,24 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { MapTools } from '../components/tools';
+import Layout from '../components/Layout/Layout';
 
 function ToolsContainer({ tools, label }) {
   return (
-    
-      <div className='flex items-start gap-2 flex-col'>
-        <h2 className='text-lg font-semibold'>{label}</h2>
-        <div className='flex items-center gap-4 overflow-x-auto w-full flex-wrap flex-1 justify-around sm:justify-start'>
-          {tools}
-        </div>
+
+    <div className='flex items-start gap-2 flex-col'>
+      <h2 className='text-lg font-semibold'>{label}</h2>
+      <div className='flex items-center gap-4 overflow-x-auto w-full flex-wrap flex-1 justify-around sm:justify-start'>
+        {tools}
       </div>
+    </div>
   )
 }
 
 
 
 
-function About() {
+export default function About() {
   return (
     <>
       <Head>
@@ -46,4 +47,4 @@ function About() {
   )
 }
 
-export default About
+About.DefaultLayout = Layout

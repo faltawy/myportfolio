@@ -4,6 +4,22 @@ import '../styles/globals.css';
 import Head from 'next/head';
 import Layout from '../components/Layout/Layout';
 import 'animate.css';
+import React, { FC } from "react";
+
+
+
+function renderWithLayout(Rfc, props) {
+  if (typeof Rfc ==! typeof FC) {
+    throw TypeError('The Rfc parameter should be react functional component')
+  } else {
+    if (Rfc.DefaultLayout) {
+      return <Rfc.DefaultLayout><Rfc {...props} /></Rfc.DefaultLayout>
+    } else {
+      return <Rfc {...props} />
+    }
+  }
+}
+
 
 
 function MyApp({ Component, pageProps }) {
@@ -12,9 +28,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Ahmed Hassan</title>
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {renderWithLayout(Component, { pageProps: pageProps })}
     </>
   )
 }

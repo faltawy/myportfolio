@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaGoogle, FaGithub } from 'react-icons/fa';
-
+import Layout from '../components/Layout/Layout';
 
 function Social({ icon, link, delay }) {
   return (
@@ -31,3 +31,5 @@ export default function Home() {
     </div>
   )
 }
+
+Home.DefaultLayout = Layout

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import { SiFigma } from 'react-icons/si';
+import Layout from '../components/Layout/Layout';
 
 function Contact() {
     return (
@@ -29,5 +30,5 @@ function Contact() {
         </>
     )
 }
-
+Contact.DefaultLayout = Layout
 export default Contact

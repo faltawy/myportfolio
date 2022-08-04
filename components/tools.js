@@ -32,11 +32,14 @@ export function Tool({ label, icon, variant,delay }) {
                 {`
             @keyframes swing-in-top-fwd{0%{transform:rotateX(-100deg);transform-origin:top;opacity:0}100%{transform:rotateX(0deg);transform-origin:top;opacity:1}}
             .swing-in-top-fwd{animation:swing-in-top-fwd 1s cubic-bezier(.175,.885,.32,1.275) forwards}
-        `}
+            .prespective_rotate{
+                
+            }
+            `}
             </style>
 
 
-            <div style={{ boxShadow: `inset 0px -2px ${variant}`,animationDelay:delay,'--variant':variant }} className='w-[125px] cursor-pointer transition-all opacity-0 swing-in-top-fwd p-2 hover:text-[color:var(--variant)] rounded-lg h-[100px] flex items-center justify-center dark:bg-lightBlue bg-lightWhite'>
+            <div style={{ boxShadow: `inset 0px -2px ${variant}`,animationDelay:delay,'--variant':variant }} className='w-[125px] cursor-pointer transition-all opacity-0 swing-in-top-fwd p-2 text-[color:var(--variant)] dark:text-lightWhite rounded-xl h-[100px] flex items-center justify-center dark:bg-lightBlue bg-lightBlue'>
                 <div className='w-full h-full flex flex-col items-center justify-between '>
                     <span style={{ color: variant }}>{React.createElement(icon, { size: 35 })}</span>
                     <span className='font-bold text-lg whitespace-nowrap overflow-ellipsis'>{label}</span>
