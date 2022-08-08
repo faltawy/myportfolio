@@ -1,4 +1,4 @@
-import { SiCelery, SiDjango, SiPython, SiFastapi, SiGnubash, SiJinja } from 'react-icons/si';
+import { SiCelery, SiDjango, SiPython, SiFastapi, SiGnubash, SiJinja, SiAlpinedotjs, SiReact } from 'react-icons/si';
 import { DiCss3, DiJavascript1, DiRedis, DiSass } from 'react-icons/di';
 import { AiFillHtml5 } from 'react-icons/ai';
 import React from 'react';
@@ -14,7 +14,8 @@ const tools = [
 
     { label: 'Sass', icon: DiSass, frontEnd: true, variant: '#c69', language: false },
     { label: 'TailwindCss', icon: DiCss3, frontEnd: true, variant: '#38bdf8', language: false },
-    { label: 'ReactJs', icon: SiDjango, frontEnd: true, variant: '#61DBFB', language: false },
+    { label: 'ReactJs', icon: SiReact, frontEnd: true, variant: '#61DBFB', language: false },
+    { label: 'alpinejs', icon: SiAlpinedotjs, frontEnd: true, variant: '#77c1d2', language: false },
 
     { label: 'Django', icon: SiDjango, frontEnd: false, variant: '#0c4b33', language: false },
     { label: 'Fast Api', icon: SiFastapi, frontEnd: false, variant: '#059487', language: false },
@@ -22,9 +23,10 @@ const tools = [
     { label: 'Celery', icon: SiCelery, frontEnd: false, variant: '#98c859', language: false },
     { label: 'Jinja', icon: SiJinja, frontEnd: false, variant: '#323232', language: false },
 
+
 ]
 
-export function Tool({ label, icon, variant,delay }) {
+export function Tool({ label, icon, variant, delay }) {
 
     return (
         <>
@@ -39,7 +41,7 @@ export function Tool({ label, icon, variant,delay }) {
             </style>
 
 
-            <div style={{ boxShadow: `inset 0px -2px ${variant}`,animationDelay:delay,'--variant':variant }} className='w-[125px] cursor-pointer transition-all opacity-0 swing-in-top-fwd p-2 text-[color:var(--variant)] dark:text-lightWhite rounded-xl h-[100px] flex items-center justify-center dark:bg-lightBlue bg-lightBlue'>
+            <div style={{ boxShadow: `inset 0px -2px ${variant}`, animationDelay: delay, '--variant': variant }} className='w-[125px] cursor-pointer transition-all opacity-0 swing-in-top-fwd p-2 text-[color:var(--variant)] dark:text-lightWhite rounded-xl h-[100px] flex items-center justify-center dark:bg-lightBlue bg-lightBlue'>
                 <div className='w-full h-full flex flex-col items-center justify-between '>
                     <span style={{ color: variant }}>{React.createElement(icon, { size: 35 })}</span>
                     <span className='font-bold text-lg whitespace-nowrap overflow-ellipsis'>{label}</span>
@@ -52,7 +54,7 @@ export function MapTools(language) {
     // item:str => check if exists
     return tools.map((item, index) => {
         if (item.language === language) {
-            return <Tool key={index} delay={100*index + 'ms'} {...item} />
+            return <Tool key={index} delay={100 * index + 'ms'} {...item} />
         }
     })
 }

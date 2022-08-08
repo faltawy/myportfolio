@@ -26,9 +26,9 @@ export default function About() {
         <title>Ahmed|About</title>
       </Head>
 
-      <div className="grid container mx-auto p-3 mt-5 lg:grid-cols-4 grid-cols-1  place-items-center justify-between gap-3 overflow-auto">
+      <div className="grid container mx-auto p-3 mt-5 lg:grid-cols-4 grid-cols-1 place-items-center justify-between gap-3 overflow-auto">
         <h1 className='font-bold text-4xl text-start w-full text-white col-span-full'>About</h1>
-        <p className='font-light col-span-2 text-start text-[18px] font-inter tracking-normal text-lightWhite leading-tight'>Hey There,<br /> Iam ahmed hassan Egyptian web developer <br /> based in zagazig city, 3 years ago i started to look outside the dental field so i learnet python in order to create dental related projects to solve several proplems, then i started learning several libraries like pandas,numby then i found that the web is the best place in order to puplish your work and let the people take advantage of what i gonna make,so i started learning django web framework and iam still using it till now as my primary backend  stact (django template language requires well known html and css and little js experience),so i tried to learn frontend  web development primarly reactjs to make my webpages more reactive and the concept of component realy blowed my mind</p>
+        <p className='font-light col-span-2 text-start text-[18px] font-inter tracking-normal text-lightWhite leading-tight'>Hey There,<br /> Iam ahmed hassan Egyptian web developer <br /> based in zagazig city, iam self taught web developer spechilized in front-end design and development i started with html and css and little of js using alpine js and htmx then i migrated to reactjs and node </p>
 
         <div className='h-[300px] col-span-2 w-[350px] sm:max-w-sm max-w-full relative group cursor-pointer'>
           <span className='absolute top-1 hidden sm:inline-block group-hover:top-0 group-hover:left-0 left-2 w-full transition-all border-[1px] h-full rounded-[50px] border-brand'></span>
