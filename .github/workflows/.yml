@@ -1,0 +1,35 @@
+name: screenshots ci actions
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: install puppeteer-headful
+      uses: mujo-code/puppeteer-headful@master
+      env:
+        CI: 'true'
+    - name: screenshots-desktop-facebook
+      uses: flameddd/screenshots-ci-action@master
+      with:
+        url: https://www.facebook.com/
+    - uses: actions/upload-artifact@v2
+      with:
+        path: screenshots
+        name: Download-desktop-screenshots # Put URL1 screenshots into Download-desktop-screenshots
+    - run: rm ./screenshots/* # Remove URL1 files
+
+    - name: screenshots-mobile-facebook
+      uses: flameddd/screenshots-ci-action@master
+      with:
+        url: https://m.facebook.com/
+        devices: iPhone 6,iPhone 6 landscape
+        noDesktop: false
+    - uses: actions/upload-artifact@v2
+      with:
+        path: screenshots
+        name: Download-mobile-screenshots # Put URL2 screenshots into Download-desktop-screenshots
