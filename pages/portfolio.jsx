@@ -1,33 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout/Layout';
 import Image from 'next/image';
+import { VscClose } from 'react-icons/vsc';
 
 
-function Project({ img, title, stack_list, description }) {
+function Small({ src, active = false }) {
     return (
-        <div className='flex items-center overflow-hidden h-[250px] w-full bg-slate-500 rounded-lg'>
-            <div className="h-full w-1/2 overflow-hidden">
-                <Image
-                    src='https://picsum.photos/200/500'
-                    alt="thumbnail"
-                    objectFit='contain'
-                    layout='responsive' height='100' width='100'
-                />
-            </div>
+        <div className='h-[50px] w-[50px] overflow-hidden rounded-lg cursor-pointer sm:brightness-50 sm:hover:brightness-100'>
+            <Image src={'https://picsum.photos/200'} layout='responsive' height='100%' width='100%' className='w-full h-auto' objectFit='cover' loading='lazy' objectPosition='center' />
         </div>
     )
 }
 
 
-
-function portfolio() {
+function Portfolio() {
     return (
         <div className='w-full h-full'>
-            <div className="grid grid-cols-2 p-3">
-                <Project />
-            </div>
+            <article className='flex items-center flex-col gap-3 max-w-[300px] bg-white p-2'>
+                <div className='w-full'>
+                    
+                    <div className='h-auto w-[180px] overflow-hidden rounded-md'>
+                        <Image src={'https://picsum.photos/200'} layout='responsive' height='100%' width='100%' className='w-full h-auto' objectFit='cover' loading='lazy' objectPosition='center' />
+                    </div>
+                </div>
+                <div className='flex items-start gap-3 max-w-full'>
+                    <Small />
+                    <Small />
+                    <Small />
+                    <Small />
+                </div>
+            </article>
         </div>
     )
 }
-portfolio.DefaultLayout = Layout
-export default portfolio
+Portfolio.DefaultLayout = Layout
+export default Portfolio

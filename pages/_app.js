@@ -2,10 +2,9 @@ import "@fontsource/inter"
 import "@fontsource/montserrat-alternates";
 import '../styles/globals.css';
 import Head from 'next/head';
-import Layout from '../components/Layout/Layout';
 import 'animate.css';
-import React, { FC } from "react";
-import LoadingScreen from "../components/LoadingScreen";
+import React from "react";
+import { IconBase } from "react-icons";
 
 
 
